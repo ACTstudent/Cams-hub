@@ -174,7 +174,7 @@ export default function Hero() {
                 </div>
                 <div className="p-3 rounded-2xl neo-inset flex flex-col items-center text-center">
                   <span className="text-[10px] font-bold uppercase text-[#6B7280] tracking-wider mb-1">xUnit Tests</span>
-                  <span className="font-display font-extrabold text-sm text-[#3D4852]">47/47 Passed</span>
+                  <span className="font-display font-extrabold text-sm text-[#3D4852]">129/129 Passed</span>
                 </div>
               </div>
 

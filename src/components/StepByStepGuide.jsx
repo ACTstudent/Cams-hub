@@ -280,7 +280,7 @@ export default function StepByStepGuide() {
               <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 text-xs">
                 <div className="p-4 rounded-2xl neo-inset text-center">
                   <span className="text-[#6B7280] block mb-1">1. Test Suite</span>
-                  <span className="font-bold text-[#38B2AC]">47/47 xUnit Passed</span>
+                  <span className="font-bold text-[#38B2AC]">129/129 xUnit Passed</span>
                 </div>
                 <div className="p-4 rounded-2xl neo-inset text-center">
                   <span className="text-[#6B7280] block mb-1">2. Target Framework</span>
