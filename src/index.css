@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #E0E5EC;
+    color: #3D4852;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+@layer utilities {
+  /* Neumorphic Shadow Base Classes */
+  .neo-extruded {
+    background-color: #E0E5EC;
+    box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
+    transition: transform 300ms ease-out, box-shadow 300ms ease-out;
+  }
+
+  .neo-extruded-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 12px 12px 20px rgba(163, 177, 198, 0.7), -12px -12px 20px rgba(255, 255, 255, 0.6);
+  }
+
+  .neo-extruded-sm {
+    background-color: #E0E5EC;
+    box-shadow: 5px 5px 10px rgba(163, 177, 198, 0.6), -5px -5px 10px rgba(255, 255, 255, 0.5);
+    transition: transform 300ms ease-out, box-shadow 300ms ease-out;
+  }
+
+  .neo-inset {
+    background-color: #E0E5EC;
+    box-shadow: inset 6px 6px 10px rgba(163, 177, 198, 0.6), inset -6px -6px 10px rgba(255, 255, 255, 0.5);
+  }
+
+  .neo-inset-deep {
+    background-color: #E0E5EC;
+    box-shadow: inset 10px 10px 20px rgba(163, 177, 198, 0.7), inset -10px -10px 20px rgba(255, 255, 255, 0.6);
+  }
+
+  .neo-inset-sm {
+    background-color: #E0E5EC;
+    box-shadow: inset 3px 3px 6px rgba(163, 177, 198, 0.6), inset -3px -3px 6px rgba(255, 255, 255, 0.5);
+  }
+
+  /* Tactile Button Utilities */
+  .neo-btn {
+    background-color: #E0E5EC;
+    border-radius: 16px;
+    box-shadow: 7px 7px 14px rgba(163, 177, 198, 0.6), -7px -7px 14px rgba(255, 255, 255, 0.5);
+    transition: all 300ms ease-out;
+  }
+
+  .neo-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 10px 10px 18px rgba(163, 177, 198, 0.7), -10px -10px 18px rgba(255, 255, 255, 0.6);
+  }
+
+  .neo-btn:active {
+    transform: translateY(1px);
+    box-shadow: inset 4px 4px 8px rgba(163, 177, 198, 0.7), inset -4px -4px 8px rgba(255, 255, 255, 0.6);
+  }
+
+  /* Accent Button */
+  .neo-btn-primary {
+    background: linear-gradient(135deg, #6C63FF 0%, #8B84FF 100%);
+    color: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 6px 6px 14px rgba(108, 99, 255, 0.4), -6px -6px 14px rgba(255, 255, 255, 0.6);
+    transition: all 300ms ease-out;
+  }
+
+  .neo-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 8px 8px 18px rgba(108, 99, 255, 0.5), -8px -8px 18px rgba(255, 255, 255, 0.7);
+  }
+
+  .neo-btn-primary:active {
+    transform: translateY(1px);
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.3), inset -4px -4px 8px rgba(255, 255, 255, 0.2);
+  }
+
+  /* Mandatory Focus States */
+  .focus-neo {
+    outline: none;
+  }
+  
+  .focus-neo:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px #E0E5EC, 0 0 0 4px #6C63FF;
+  }
+}
+
+/* Custom Scrollbar for Smooth Neumorphic Aesthetic */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E0E5EC;
+  box-shadow: inset 2px 2px 5px rgba(163, 177, 198, 0.5), inset -2px -2px 5px rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C4CEDB;
+  border-radius: 9999px;
+  box-shadow: 2px 2px 5px rgba(163, 177, 198, 0.6), -2px -2px 5px rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6C63FF;
+}
