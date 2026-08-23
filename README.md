@@ -9,6 +9,13 @@ The public landing page for CAMS, a LAN-based classroom computer-laboratory moni
 - UDP discovery guidance on port `5001` and SignalR on HTTPS port `5000`.
 - Deployment instructions for teachers and lab administrators.
 
+## Current Release
+
+The landing page currently targets [CAMS v2.5.3](https://github.com/ACTstudent/RemoteAcessMonitoringSoftware4sale/releases/tag/v2.5.3), the latest published release:
+
+- [CAMS Server Setup](https://github.com/ACTstudent/RemoteAcessMonitoringSoftware4sale/releases/download/v2.5.3/CAMS-Server-Setup.exe)
+- [CAMS Student Client](https://github.com/ACTstudent/RemoteAcessMonitoringSoftware4sale/releases/download/v2.5.3/CAMS-Client-Setup.exe)
+
 ## Development
 
 ```powershell
