@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { Download, Server, Monitor, ShieldCheck, Key, Terminal, Check, Copy, CheckCircle2, Play, Cpu, ArrowRight } from 'lucide-react';
+import { Download, Server, Monitor, ShieldCheck, Copy, CheckCircle2 } from 'lucide-react';
+import { CAMS_VERSION, CLIENT_DOWNLOAD_URL, SERVER_DOWNLOAD_URL } from '../releaseConfig.js';
 
 export default function StepByStepGuide() {
   const [copiedCmd, setCopiedCmd] = useState(false);
 
-  const serverDownloadUrl = 'https://github.com/ACTstudent/RemoteAcessMonitoringSoftware4sale/raw/main/server-dist/CAMS-Server-Setup.exe';
-  const clientDownloadUrl = 'https://github.com/ACTstudent/RemoteAcessMonitoringSoftware4sale/raw/main/client-dist/CAMS-Client-Setup.exe';
   const buildCmd = 'powershell -NoProfile -ExecutionPolicy Bypass -File build-everything.ps1';
 
   const copyBuildCmd = () => {
@@ -22,7 +21,7 @@ export default function StepByStepGuide() {
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full neo-inset-sm text-xs font-bold text-[#6C63FF] uppercase tracking-wider">
             <ShieldCheck className="w-4 h-4 text-[#6C63FF]" />
-            Deployment Guide • Release v2.5.3
+             Deployment Guide • Release v{CAMS_VERSION}
           </div>
           <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-[#3D4852] tracking-tight">
             Step-by-Step Installation & Deployment
@@ -53,7 +52,7 @@ export default function StepByStepGuide() {
               </div>
 
               <a
-                href={serverDownloadUrl}
+                 href={SERVER_DOWNLOAD_URL}
                 download="CAMS-Server-Setup.exe"
                 className="px-6 py-3.5 neo-btn-primary text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2.5 focus-neo shrink-0"
               >
@@ -90,51 +89,15 @@ export default function StepByStepGuide() {
                       3
                     </div>
                     <p className="text-sm text-[#3D4852] font-medium leading-relaxed">
-                      Launch the CAMS Web Portal at <code className="px-2 py-1 rounded-lg neo-inset-sm font-mono text-xs text-[#38B2AC] font-bold">http://localhost:5000</code> or your server's local LAN IP address.
+                       Launch the CAMS Web Portal at <code className="px-2 py-1 rounded-lg neo-inset-sm font-mono text-xs text-[#38B2AC] font-bold">https://localhost:5000</code> or your server's trusted LAN hostname.
                     </p>
                   </div>
                 </div>
 
-                {/* Default Credentials Table */}
-                <div className="p-6 rounded-2xl neo-inset space-y-3">
-                  <h4 className="font-display font-bold text-xs uppercase tracking-wider text-[#6C63FF] flex items-center gap-2">
-                    <Key className="w-4 h-4" />
-                    Default Seed Login Credentials
-                  </h4>
-                  
-                  <div className="overflow-x-auto">
-                    <table className="w-full text-left text-xs">
-                      <thead>
-                        <tr className="border-b border-[#A3B1C6]/30 text-[#6B7280]">
-                          <th className="pb-2 font-bold uppercase">Role</th>
-                          <th className="pb-2 font-bold uppercase">Username</th>
-                          <th className="pb-2 font-bold uppercase">Password</th>
-                          <th className="pb-2 font-bold uppercase">Access Level</th>
-                        </tr>
-                      </thead>
-                      <tbody className="divide-y divide-[#A3B1C6]/20 font-medium text-[#3D4852]">
-                        <tr>
-                          <td className="py-2.5 font-bold text-[#6C63FF]">Admin</td>
-                          <td className="py-2.5 font-mono">admin</td>
-                          <td className="py-2.5 font-mono">admin123</td>
-                          <td className="py-2.5 text-[#6B7280]">Full system control, accounts, classes, LAN rules</td>
-                        </tr>
-                        <tr>
-                          <td className="py-2.5 font-bold text-[#38B2AC]">Teacher</td>
-                          <td className="py-2.5 font-mono">teacher1</td>
-                          <td className="py-2.5 font-mono">teacher123</td>
-                          <td className="py-2.5 text-[#6B7280]">Live grid monitoring, session lock, student records</td>
-                        </tr>
-                        <tr>
-                          <td className="py-2.5 font-bold text-[#3D4852]">Student</td>
-                          <td className="py-2.5 font-mono">student1</td>
-                          <td className="py-2.5 font-mono">student123</td>
-                          <td className="py-2.5 text-[#6B7280]">Session status & workstation alert center</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+                 <div className="p-6 rounded-2xl neo-inset space-y-3">
+                   <h4 className="font-display font-bold text-xs uppercase tracking-wider text-[#6C63FF]">Initial administrator setup</h4>
+                   <p className="text-xs text-[#6B7280] leading-relaxed">Set <code className="font-mono">Cams__InitialAdminPassword</code> before the first server launch. CAMS no longer ships public default passwords. Create teachers and students from the secured admin portal.</p>
+                 </div>
               </div>
 
               <div className="lg:col-span-5 p-6 rounded-2xl neo-inset-deep space-y-4">
@@ -142,7 +105,7 @@ export default function StepByStepGuide() {
                 <ul className="space-y-3 text-xs text-[#3D4852] font-medium">
                   <li className="flex items-center gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-[#38B2AC] shrink-0" />
-                    ASP.NET Core Kestrel HTTP Server on Port 5000
+                     ASP.NET Core HTTPS Server on Port 5000
                   </li>
                   <li className="flex items-center gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-[#38B2AC] shrink-0" />
@@ -181,7 +144,7 @@ export default function StepByStepGuide() {
               </div>
 
               <a
-                href={clientDownloadUrl}
+                 href={CLIENT_DOWNLOAD_URL}
                 download="CAMS-Client-Setup.exe"
                 className="px-6 py-3.5 neo-btn text-xs font-bold text-[#3D4852] hover:text-[#6C63FF] uppercase tracking-wider flex items-center justify-center gap-2.5 focus-neo shrink-0"
               >
@@ -216,7 +179,7 @@ export default function StepByStepGuide() {
                     3
                   </div>
                   <p className="text-sm text-[#3D4852] font-medium leading-relaxed">
-                    Workstation streams appear instantly on the Teacher Monitoring Grid for remote locking, screen viewing, and timed 45-minute lab session tracking.
+                     Workstation streams appear instantly on the Teacher Monitoring Grid for remote locking, screen viewing, and timed lab session tracking.
                   </p>
                 </div>
               </div>
@@ -280,7 +243,7 @@ export default function StepByStepGuide() {
               <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 text-xs">
                 <div className="p-4 rounded-2xl neo-inset text-center">
                   <span className="text-[#6B7280] block mb-1">1. Test Suite</span>
-                  <span className="font-bold text-[#38B2AC]">129/129 xUnit Passed</span>
+                   <span className="font-bold text-[#38B2AC]">CI test suite</span>
                 </div>
                 <div className="p-4 rounded-2xl neo-inset text-center">
                   <span className="text-[#6B7280] block mb-1">2. Target Framework</span>

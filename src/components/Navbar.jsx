@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { Camera, Menu, X, Download, BookOpen } from 'lucide-react';
+import { CAMS_VERSION, SERVER_DOWNLOAD_URL } from '../releaseConfig.js';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const serverDownloadUrl = 'https://github.com/ACTstudent/RemoteAcessMonitoringSoftware4sale/raw/main/server-dist/CAMS-Server-Setup.exe';
 
   return (
     <header className="sticky top-0 z-40 bg-[#E0E5EC]/90 backdrop-blur-md transition-all duration-300">
@@ -27,7 +26,7 @@ export default function Navbar() {
                 </span>
               </div>
               <span className="text-[10px] font-medium text-[#6B7280] tracking-widest uppercase -mt-1">
-                Release v2.5.3
+                 Release v{CAMS_VERSION}
               </span>
             </div>
           </a>
@@ -99,7 +98,7 @@ export default function Navbar() {
               ))}
               <div className="pt-3 border-t border-[#A3B1C6]/30 flex flex-col gap-3">
                 <a
-                  href={serverDownloadUrl}
+                   href={SERVER_DOWNLOAD_URL}
                   download
                   onClick={() => setMobileMenuOpen(false)}
                   className="w-full py-3 neo-btn-primary text-sm font-bold flex items-center justify-center gap-2 focus-neo"

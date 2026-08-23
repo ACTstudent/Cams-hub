@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
-import { Download, Monitor, Server, ShieldCheck, Check, Copy, ExternalLink, Cpu, FileText, CheckCircle2 } from 'lucide-react';
+import { Download, Monitor, Server, Check, Copy, ExternalLink, Cpu, CheckCircle2 } from 'lucide-react';
+import { CAMS_VERSION, CLIENT_DOWNLOAD_URL, REPOSITORY_URL, SERVER_DOWNLOAD_URL } from '../releaseConfig.js';
 
 export default function DownloadCenter() {
   const [copiedLink, setCopiedLink] = useState(false);
-
-  const repoUrl = 'https://github.com/ACTstudent/RemoteAcessMonitoringSoftware4sale';
-  const serverDownloadUrl = 'https://github.com/ACTstudent/RemoteAcessMonitoringSoftware4sale/raw/main/server-dist/CAMS-Server-Setup.exe';
-  const clientDownloadUrl = 'https://github.com/ACTstudent/RemoteAcessMonitoringSoftware4sale/raw/main/client-dist/CAMS-Client-Setup.exe';
 
   const copyRepo = () => {
     navigator.clipboard.writeText('git clone https://github.com/ACTstudent/RemoteAcessMonitoringSoftware4sale.git');
@@ -22,7 +19,7 @@ export default function DownloadCenter() {
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full neo-inset-sm text-xs font-bold text-[#6C63FF] uppercase tracking-wider">
             <Download className="w-4 h-4 text-[#6C63FF] animate-bounce" />
-            Official Release v2.5.3 • Pre-Built Binaries
+             Official Release v{CAMS_VERSION} • Versioned Binaries
           </div>
           <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-[#3D4852] tracking-tight">
             Download CAMS Installer Executables
@@ -65,7 +62,7 @@ export default function DownloadCenter() {
                 {[
                   'Clean Installation (`cleaninstall`) auto-purge',
                   'Dark Emerald Web Dashboard & Live Monitor Grid',
-                  'Automatic Windows Firewall (Ports 5000/5001) rule configuration',
+                   'Automatic Windows Firewall rules for HTTPS 5000 and UDP 5001',
                   'Workstation Lock, Remote Shutdown & Timed Lab Sessions',
                   'Multi-role login (Admin, Teacher, Student)',
                 ].map((item, i) => (
@@ -82,7 +79,7 @@ export default function DownloadCenter() {
             {/* Action Download Button */}
             <div className="pt-6 border-t border-[#A3B1C6]/30 space-y-3">
               <a
-                href={serverDownloadUrl}
+                 href={SERVER_DOWNLOAD_URL}
                 download="CAMS-Server-Setup.exe"
                 className="w-full py-4 neo-btn-primary text-sm font-bold uppercase tracking-wider flex items-center justify-center gap-3 focus-neo shadow-md"
               >
@@ -91,7 +88,7 @@ export default function DownloadCenter() {
               </a>
               <div className="flex items-center justify-between text-[11px] font-mono text-[#6B7280]">
                 <span>Target: Windows 10/11 x64</span>
-                <span>File: server-dist/CAMS-Server-Setup.exe</span>
+                 <span>Release asset: v{CAMS_VERSION}</span>
               </div>
             </div>
           </div>
@@ -125,7 +122,7 @@ export default function DownloadCenter() {
               <ul className="space-y-3 mb-8">
                 {[
                   'Automatic UDP Broadcast LAN server auto-discovery',
-                  'High-frequency SignalR screen streaming agent',
+                   'Adaptive authenticated SignalR screen streaming (~12 FPS default)',
                   'Clean Installation (`cleaninstall`) binary update support',
                   'Application tracking & idle infraction alert popups',
                   'Self-contained .NET 8 WinForms desktop executable',
@@ -143,7 +140,7 @@ export default function DownloadCenter() {
             {/* Action Download Button */}
             <div className="pt-6 border-t border-[#A3B1C6]/30 space-y-3">
               <a
-                href={clientDownloadUrl}
+                 href={CLIENT_DOWNLOAD_URL}
                 download="CAMS-Client-Setup.exe"
                 className="w-full py-4 neo-btn text-sm font-bold text-[#3D4852] hover:text-[#6C63FF] uppercase tracking-wider flex items-center justify-center gap-3 focus-neo"
               >
@@ -152,7 +149,7 @@ export default function DownloadCenter() {
               </a>
               <div className="flex items-center justify-between text-[11px] font-mono text-[#6B7280]">
                 <span>Target: Student PC (Win 10/11)</span>
-                <span>File: client-dist/CAMS-Client-Setup.exe</span>
+                 <span>Release asset: v{CAMS_VERSION}</span>
               </div>
             </div>
           </div>
@@ -167,7 +164,7 @@ export default function DownloadCenter() {
             </div>
             <div>
               <h4 className="font-display font-bold text-sm text-[#3D4852]">GitHub Open-Source Repository</h4>
-              <p className="text-xs text-[#6B7280]">ACTstudent/RemoteAcessMonitoringSoftware4sale • Release v2.5.3 (MIT License)</p>
+               <p className="text-xs text-[#6B7280]">ACTstudent/RemoteAcessMonitoringSoftware4sale • Release v{CAMS_VERSION} (MIT License)</p>
             </div>
           </div>
 
@@ -180,7 +177,7 @@ export default function DownloadCenter() {
               {copiedLink ? 'Cloned Command Copied!' : 'Copy Clone URL'}
             </button>
             <a
-              href={repoUrl}
+               href={REPOSITORY_URL}
               target="_blank"
               rel="noreferrer"
               className="px-5 py-2.5 neo-btn-primary text-xs font-bold uppercase tracking-wider flex items-center gap-2 focus-neo"

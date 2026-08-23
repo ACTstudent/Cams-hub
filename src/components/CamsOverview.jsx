@@ -1,5 +1,6 @@
 import React from 'react';
 import { Shield, Users, Monitor, Clock, HardDrive, Lock, CheckCircle2, ArrowRight } from 'lucide-react';
+import { CAMS_VERSION } from '../releaseConfig.js';
 
 export default function CamsOverview() {
   const features = [
@@ -13,7 +14,7 @@ export default function CamsOverview() {
     {
       icon: Monitor,
       title: 'Real-Time Screen Monitoring Grid',
-      description: 'High-frequency SignalR WebSocket screen streaming grid with remote workstation lock, shutdown, reboot, and teacher broadcast.',
+       description: 'Authenticated HTTPS SignalR screen monitoring with remote workstation lock, logout, shutdown, and teacher broadcast.',
       badge: 'SignalR WebSockets',
       color: 'text-[#38B2AC]',
     },
@@ -27,7 +28,7 @@ export default function CamsOverview() {
     {
       icon: Clock,
       title: 'Timed 45-Min Laboratory Sessions',
-      description: 'Automated 45-minute lab session countdown timers, automated attendance logs, and application whitelist security policies.',
+       description: 'Timed lab session countdowns, attendance logs, idle tracking, and application restriction policies.',
       badge: 'Automated Attendance',
       color: 'text-[#38B2AC]',
     },
@@ -96,7 +97,7 @@ export default function CamsOverview() {
 
                 <div className="mt-8 pt-4 border-t border-[#A3B1C6]/20 flex items-center gap-2 text-xs font-semibold text-[#6C63FF]">
                   <CheckCircle2 className="w-4 h-4 text-[#38B2AC]" />
-                  Included in v2.5.3 Build
+                   Included in v{CAMS_VERSION} Release
                 </div>
               </div>
             );

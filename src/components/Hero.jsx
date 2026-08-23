@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { 
-  Download, ShieldCheck, Monitor, Cpu, 
+  Download, Monitor, Cpu,
   CheckCircle2, Lock, Eye, Radio, Sparkles, BookOpen
 } from 'lucide-react';
+import { CAMS_VERSION } from '../releaseConfig.js';
 
 export default function Hero() {
   const [activeCam, setActiveCam] = useState('PC-Lab-01');
 
   const workstations = [
-    { id: 'PC-Lab-01', user: 'Student 1', status: 'Active 45m', fps: '30 FPS' },
-    { id: 'PC-Lab-02', user: 'Student 2', status: 'Active 45m', fps: '30 FPS' },
+    { id: 'PC-Lab-01', user: 'Student 1', status: 'Active', fps: '~12 FPS' },
+    { id: 'PC-Lab-02', user: 'Student 2', status: 'Active', fps: '~12 FPS' },
     { id: 'PC-Lab-03', user: 'Student 3', status: 'Locked', fps: '0 FPS' },
   ];
 
@@ -35,7 +36,7 @@ export default function Hero() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#38B2AC]"></span>
               </span>
               <Sparkles className="w-3.5 h-3.5 text-[#38B2AC]" />
-              Official CAMS v2.5.3 Installer Portal
+              Official CAMS v{CAMS_VERSION} Release Hub
             </div>
 
             {/* Main Display Headline */}
@@ -45,7 +46,7 @@ export default function Hero() {
 
             {/* Paragraph Subtitle */}
             <p className="text-base sm:text-lg text-[#6B7280] font-normal leading-relaxed max-w-xl">
-              LAN-based laboratory management, timed 45-minute lab sessions, real-time SignalR screen monitoring, and centralized workstation control.
+               LAN-based laboratory management, timed lab sessions, real-time authenticated SignalR screen monitoring, and centralized workstation control.
             </p>
 
             {/* Action Buttons */}
@@ -77,7 +78,7 @@ export default function Hero() {
               </div>
               <div className="flex items-center gap-2">
                 <Lock className="w-4 h-4 text-[#38B2AC]" />
-                AES-256 Encrypted
+                 HTTPS / TLS Transport
               </div>
               <div className="flex items-center gap-2">
                 <Radio className="w-4 h-4 text-[#38B2AC]" />
@@ -99,7 +100,7 @@ export default function Hero() {
                   </div>
                   <div>
                     <h3 className="font-display font-bold text-sm text-[#3D4852]">CAMS Teacher Grid Console</h3>
-                    <p className="text-xs text-[#6B7280]">Lab Session Active • 45 Min Session</p>
+                     <p className="text-xs text-[#6B7280]">Lab Session Active • Timed Session</p>
                   </div>
                 </div>
 
@@ -132,7 +133,7 @@ export default function Hero() {
                     </div>
                     <div className="text-center">
                       <span className="text-xs font-bold text-[#3D4852] block">Student Screen Broadcast</span>
-                      <span className="text-[10px] text-[#38B2AC] font-semibold">P2P SignalR Stream • 30 FPS</span>
+                       <span className="text-[10px] text-[#38B2AC] font-semibold">Authenticated SignalR Stream • ~12 FPS</span>
                     </div>
                   </div>
                 </div>
@@ -174,7 +175,7 @@ export default function Hero() {
                 </div>
                 <div className="p-3 rounded-2xl neo-inset flex flex-col items-center text-center">
                   <span className="text-[10px] font-bold uppercase text-[#6B7280] tracking-wider mb-1">xUnit Tests</span>
-                  <span className="font-display font-extrabold text-sm text-[#3D4852]">129/129 Passed</span>
+                   <span className="font-display font-extrabold text-sm text-[#3D4852]">CI Verified</span>
                 </div>
               </div>
 
