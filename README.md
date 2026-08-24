@@ -11,10 +11,10 @@ The public landing page for CAMS, a LAN-based classroom computer-laboratory moni
 
 ## Current Release
 
-The landing page currently targets [CAMS v2.5.5](https://github.com/ACTstudent/RemoteAcessMonitoringSoftware4sale/releases/tag/v2.5.5), the latest published release:
+The landing page currently targets [CAMS v2.5.6](https://github.com/ACTstudent/RemoteAcessMonitoringSoftware4sale/releases/tag/v2.5.6), the latest published release:
 
-- [CAMS Server Setup](https://github.com/ACTstudent/RemoteAcessMonitoringSoftware4sale/releases/download/v2.5.5/CAMS-Server-Setup.exe)
-- [CAMS Student Client](https://github.com/ACTstudent/RemoteAcessMonitoringSoftware4sale/releases/download/v2.5.5/CAMS-Client-Setup.exe)
+- [CAMS Server Setup](https://github.com/ACTstudent/RemoteAcessMonitoringSoftware4sale/releases/download/v2.5.6/CAMS-Server-Setup.exe)
+- [CAMS Student Client](https://github.com/ACTstudent/RemoteAcessMonitoringSoftware4sale/releases/download/v2.5.6/CAMS-Client-Setup.exe)
 
 ## Development
 
