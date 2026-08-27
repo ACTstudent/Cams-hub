@@ -11,10 +11,10 @@ The public landing page for CAMS, a LAN-based classroom computer-laboratory moni
 
 ## Current Release
 
-The landing page currently targets [CAMS v2.5.8](https://github.com/ACTstudent/RemoteAcessMonitoringSoftware4sale/releases/tag/v2.5.8), the latest published release:
+The landing page currently targets [CAMS v2.5.9](https://github.com/ACTstudent/RemoteAcessMonitoringSoftware4sale/releases/tag/v2.5.9), the latest published release:
 
-- [CAMS Server Setup](https://github.com/ACTstudent/RemoteAcessMonitoringSoftware4sale/releases/download/v2.5.8/CAMS-Server-Setup.exe)
-- [CAMS Student Client](https://github.com/ACTstudent/RemoteAcessMonitoringSoftware4sale/releases/download/v2.5.8/CAMS-Client-Setup.exe)
+- [CAMS Server Setup](https://github.com/ACTstudent/RemoteAcessMonitoringSoftware4sale/releases/download/v2.5.9/CAMS-Server-Setup.exe)
+- [CAMS Student Client](https://github.com/ACTstudent/RemoteAcessMonitoringSoftware4sale/releases/download/v2.5.9/CAMS-Client-Setup.exe)
 
 For a cellphone hotspot, the teacher PC generates `CAMS-Server-Root.cer` on first start. Copy only that public certificate to each student PC, select it in the client installer, and use the teacher PC's Wi-Fi IPv4 address if UDP discovery is blocked by hotspot client isolation.
 
